@@ -7,7 +7,7 @@ interface props {
 
 const MainBlog: FC<props> = ({ blogList }) => {
   return (
-    <ul className="mt-5 lg:mt-10">
+    <ul>
       {blogList?.map((item, key) => {
         if (key === 0) {
           return <BlogCard blog={item} key={key} large />;
