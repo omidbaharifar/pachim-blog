@@ -1,10 +1,14 @@
-import blogList from "@/data/blogList";
+import { FC } from "react";
 import BlogCard from "@/components/cards/blogCard";
 
-const MainBlog = () => {
+interface props {
+  blogList?: Array<TBlogItem>;
+}
+
+const MainBlog: FC<props> = ({ blogList }) => {
   return (
     <ul className="mt-10">
-      {blogList.map((item, key) => {
+      {blogList?.map((item, key) => {
         if (key === 0) {
           return <BlogCard blog={item} key={key} large />;
         }

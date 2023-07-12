@@ -1,6 +1,8 @@
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import UserImage from "@/components/images/userImage";
+import MainImage from "@/components/images/mainImage";
 
 interface props {
   blog: TBlogItem;
@@ -18,15 +20,13 @@ const BlogCard: FC<props> = ({ blog, large }) => {
             : "border-2 border-black/10 border-solid rounded-xl overflow-hidden"
         }`}
       >
-        <div className={`group overflow-hidden ${large ? "rounded-xl" : ""}`}>
-          <Image
-            src={blog.image}
-            alt={blog.title}
-            width={1200}
-            height={600}
-            className="aspect-video object-cover object-center w-full group-hover:scale-105 transition-all"
-          />
-        </div>
+        <MainImage
+          src={blog.image}
+          alt={blog.title}
+          width={1240}
+          height={700}
+          className={large ? "rounded-xl" : ""}
+        />
         <h2
           className={`font-bold leading-relaxed ${
             large ? "text-4xl my-10" : "text-xl m-5"
@@ -47,15 +47,7 @@ const BlogCard: FC<props> = ({ blog, large }) => {
           }`}
         >
           <div className="flex justify-center items-center gap-3 pl-3">
-            <div className="rounded-full overflow-hidden w-10 h-10 flex-none">
-              <Image
-                src={blog.author.image}
-                alt={blog.author.name}
-                width={100}
-                height={100}
-                className="aspect-square object-cover object-center"
-              />
-            </div>
+            <UserImage src={blog.author.image} alt={blog.author.name} />
             <h3>{blog.author.name}</h3>
           </div>
           <p className="opacity-50 pr-3 border-r-2 border-solid border-black/50">
