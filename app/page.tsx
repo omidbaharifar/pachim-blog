@@ -1,5 +1,5 @@
 const HomePage = () => {
-  return <main></main>;
+  return <main className="bg-black min-h-screen"></main>;
 };
 
 export default HomePage;
