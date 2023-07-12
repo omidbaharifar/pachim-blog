@@ -38,7 +38,7 @@ const blogList = [
 `,
     author: {
       name: "ارسطو عباسی",
-      image: "/images/omidbaharifar.jpg",
+      image: "/images/author1.webp",
     },
   },
   {
