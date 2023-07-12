@@ -1,5 +1,4 @@
 import { FC } from "react";
-import BlogCard from "@/components/cards/blogCard";
 import { moreBlogsData } from "./data";
 import BlogList from "@/layouts/blogList";
 
@@ -10,11 +9,11 @@ interface props {
 const MoreBlogs: FC<props> = ({ blogList }) => {
   return (
     <>
-      <h2 className="font-bold leading-relaxed text-xl sm:text-2xl lg:text-4xl my-5 sm:my-8 lg:my-10 text-center 580:text-right">
+      <h2 className="font-bold leading-relaxed text-lg sm:text-xl lg:text-2xl mb-5 sm:mb-8 lg:mb-10 mt-10 sm:mt-16 lg:mt-20 text-center">
         {moreBlogsData.title}
       </h2>
       <div className="mb-10 lg:mb-20">
-        <BlogList blogList={blogList} removeFirst />
+        <BlogList blogList={blogList} />
       </div>
     </>
   );
