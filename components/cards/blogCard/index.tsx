@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
-import UserImage from "@/components/images/userImage";
 import MainImage from "@/components/images/mainImage";
+import ArticleDetail from "@/components/articleDetail";
 
 interface props {
   blog: TBlogItem;
@@ -44,21 +44,16 @@ const BlogCard: FC<props> = ({ blog, large }) => {
         >
           {blog.short}
         </p>
-        <div
-          className={`flex justify-start items-center mt-auto ${
+        <ArticleDetail
+          authorName={blog.author.name}
+          authorImage={blog.author.image}
+          publishDate={blog.date}
+          className={`mt-auto ${
             large
               ? "mb-5 sm:mb-8 lg:mb-10 text-sm lg:text-base"
               : "mb-4 mx-4 lg:mb-5 lg:mx-5 text-xs lg:text-sm"
           }`}
-        >
-          <div className="flex justify-center items-center gap-3 pl-3">
-            <UserImage src={blog.author.image} alt={blog.author.name} />
-            <h3>{blog.author.name}</h3>
-          </div>
-          <p className="opacity-50 pr-3 border-r-2 border-solid border-black/50">
-            {blog.date}
-          </p>
-        </div>
+        />
       </Link>
     </li>
   );
