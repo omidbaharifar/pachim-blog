@@ -16,7 +16,7 @@ const BlogContent: FC<props> = ({ blogData }) => {
         className="rounded-xl"
       />
       <article
-        className="mt-5 sm:mt-8 lg:mt-10 prose sm:prose-lg lg:prose-xl prose-img:w-full max-w-none"
+        className="mt-5 sm:mt-8 lg:mt-10 prose sm:prose-lg lg:prose-xl prose-img:w-full prose-a:text-red-500 max-w-none"
         dangerouslySetInnerHTML={{ __html: blogData.content }}
       ></article>
     </div>
