@@ -49,7 +49,7 @@ export const generateMetadata = async ({
       url: process.env.NEXT_PUBLIC_CLIENT_URL + "/" + slug,
       images: [
         {
-          url: blogData?.image || "",
+          url: blogData?.image || "/images/banners/mainBanner.png",
           alt: blogData?.title,
         },
       ],
@@ -62,7 +62,7 @@ export const generateMetadata = async ({
       site: "@webfriends",
       images: [
         {
-          url: blogData?.image || "",
+          url: blogData?.image || "/images/banners/mainBanner.png",
           alt: blogData?.title,
         },
       ],

@@ -27,6 +27,21 @@ export const metadata: Metadata = {
   },
   title: rootMetaDataConstants.title,
   description: rootMetaDataConstants.description,
+  icons: {
+    icon: [
+      { url: "/icons/icon16.png", type: "image/png", sizes: "16x16" },
+      { url: "/icons/icon32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icons/icon192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icons/icon512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/icons/icon16.png", type: "image/png", sizes: "16x16" },
+      { url: "/icons/icon32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icons/icon192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icons/icon512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/assets/icons/icon32.png",
+  },
   themeColor: "#fff",
   appleWebApp: {
     title: rootMetaDataConstants.websiteEnglishName,
@@ -39,6 +54,15 @@ export const metadata: Metadata = {
     siteName: rootMetaDataConstants.websiteName,
     locale: "fa_IR",
     url: process.env.NEXT_PUBLIC_CLIENT_URL,
+    images: [
+      {
+        url: "/images/banners/mainBanner.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "لوگوی وب فرندز",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -46,5 +70,14 @@ export const metadata: Metadata = {
     description: rootMetaDataConstants.description,
     creator: rootMetaDataConstants.websiteName,
     site: "@webfriends",
+    images: [
+      {
+        url: "/images/banners/mainBanner.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "لوگوی وب فرندز",
+      },
+    ],
   },
 };
