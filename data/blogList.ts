@@ -99,7 +99,7 @@ const blogList = [
 `,
     author: {
       name: "ارسطو عباسی",
-      image: "/images/author1.webp",
+      image: "/images/authors/author1.webp",
     },
   },
   {
