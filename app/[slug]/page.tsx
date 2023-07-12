@@ -15,7 +15,7 @@ const SingleBlogPage: FC<props> = ({ params }) => {
   return (
     <div className="text-black text-base">
       <Header />
-      <SingleBlogContent blogData={blogData} />
+      {blogData && <SingleBlogContent blogData={blogData} />}
       <Footer />
     </div>
   );
