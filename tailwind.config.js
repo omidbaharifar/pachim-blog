@@ -10,7 +10,11 @@ module.exports = {
     vazirmatn: "var(--font-vazirmatn)",
   },
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        580: "580px",
+      },
+    },
   },
   plugins: [],
 };

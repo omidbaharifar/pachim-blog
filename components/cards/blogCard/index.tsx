@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import UserImage from "@/components/images/userImage";
 import MainImage from "@/components/images/mainImage";
@@ -29,21 +28,27 @@ const BlogCard: FC<props> = ({ blog, large }) => {
         />
         <h2
           className={`font-bold leading-relaxed ${
-            large ? "text-4xl my-10" : "text-xl m-5"
+            large
+              ? "text-xl sm:text-2xl lg:text-4xl my-5 sm:my-8 lg:my-10"
+              : "text-base lg:text-xl m-4 lg:m-5"
           }`}
         >
           {blog.title}
         </h2>
         <p
           className={`whitespace-nowrap text-ellipsis overflow-hidden mb-5 ${
-            large ? "text-xl" : "text-base mx-5"
+            large
+              ? "text-base sm:text-lg lg:text-xl"
+              : "text-sm lg:text-base mx-4 lg:mx-5"
           }`}
         >
           {blog.short}
         </p>
         <div
           className={`flex justify-start items-center mt-auto ${
-            large ? "mb-10 text-base" : "mb-5 mx-5 text-sm"
+            large
+              ? "mb-5 sm:mb-8 lg:mb-10 text-sm lg:text-base"
+              : "mb-4 mx-4 lg:mb-5 lg:mx-5 text-xs lg:text-sm"
           }`}
         >
           <div className="flex justify-center items-center gap-3 pl-3">

@@ -10,7 +10,7 @@ interface props {
 const UserImage: FC<props> = ({ src, alt, className = "" }) => {
   return (
     <div
-      className={`rounded-full overflow-hidden w-10 h-10 flex-none ${className}`}
+      className={`rounded-full overflow-hidden w-8 h-8 lg:w-10 lg:h-10 flex-none ${className}`}
     >
       <Image
         src={src}
