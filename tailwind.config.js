@@ -5,6 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./domain/**/*.{js,ts,jsx,tsx,mdx}",
+    "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   fontFamily: {
     vazirmatn: "var(--font-vazirmatn)",
