@@ -43,6 +43,8 @@ export const generateMetadata = async ({
       title: blogData?.title,
       description: blogData?.short,
       type: "article",
+      publishedTime: blogData?.date,
+      modifiedTime: blogData?.date,
       authors: blogData?.author.name,
       siteName: rootMetaDataConstants.websiteName,
       locale: "fa_IR",

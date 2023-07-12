@@ -14,6 +14,8 @@ const ArticleDetail: FC<props> = ({
   publishDate,
   className = "",
 }) => {
+  const localePusblishData = new Date(publishDate).toLocaleDateString("fa-IR");
+
   return (
     <div className={`flex justify-start items-center ${className}`}>
       <div className="flex justify-center items-center gap-3 pl-3">
@@ -21,7 +23,7 @@ const ArticleDetail: FC<props> = ({
         <h3>{authorName}</h3>
       </div>
       <p className="opacity-50 pr-3 border-r-2 border-solid border-black/50">
-        {publishDate}
+        {localePusblishData}
       </p>
     </div>
   );
