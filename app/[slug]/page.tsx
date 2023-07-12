@@ -5,6 +5,7 @@ import Header from "@/layouts/header";
 import blogList from "@/data/blogList";
 import { Metadata } from "next";
 import { rootMetaDataConstants } from "../metaDataConstants";
+import { notFound } from "next/navigation";
 
 interface props {
   params: { slug: string };
@@ -13,6 +14,8 @@ interface props {
 const SingleBlogPage: FC<props> = ({ params }) => {
   const { slug } = params;
   const blogData = blogList.find((item) => item.slug === slug);
+
+  !blogData && notFound();
 
   return (
     <div className="text-black text-base">
