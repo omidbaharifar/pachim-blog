@@ -15,10 +15,10 @@ const BlogContent: FC<props> = ({ blogData }) => {
         height={700}
         className="rounded-xl"
       />
-      <p
-        className="mt-5 sm:mt-8 lg:mt-10 text-base sm:text-lg lg:text-xl leading-loose sm:leading-loose lg:leading-loose"
+      <article
+        className="mt-5 sm:mt-8 lg:mt-10 prose sm:prose-lg lg:prose-xl prose-img:w-full max-w-none"
         dangerouslySetInnerHTML={{ __html: blogData.content }}
-      ></p>
+      ></article>
     </div>
   );
 };
