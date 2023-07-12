@@ -7,11 +7,11 @@ interface props {
 
 const AboutBlog: FC<props> = ({ blogData }) => {
   return (
-    <div className="mt-5 sm:mt-10 lg:mt-20">
-      <h1 className="font-bold leading-relaxed text-xl sm:text-2xl lg:text-4xl text-center mb-5 sm:mb-8 lg:mb-10">
+    <div>
+      <h1 className="font-bold leading-relaxed sm:leading-relaxed lg:leading-relaxed text-xl sm:text-2xl lg:text-4xl text-center mb-5 sm:mb-8 lg:mb-10">
         {blogData?.title}
       </h1>
-      <p className="text-base sm:text-lg lg:text-xl text-center mb-5 sm:mb-8 lg:mb-10">
+      <p className="text-base sm:text-lg lg:text-xl text-center mb-5 sm:mb-8 lg:mb-10 leading-relaxed sm:leading-relaxed lg:leading-relaxed">
         {blogData.short}
       </p>
       <div className="flex justify-center items-center">

@@ -25,6 +25,7 @@ const BlogCard: FC<props> = ({ blog, large }) => {
           width={1240}
           height={700}
           className={large ? "rounded-xl" : ""}
+          hoverable
         />
         <h2
           className={`font-bold leading-relaxed ${

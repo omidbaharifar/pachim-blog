@@ -7,9 +7,17 @@ interface props {
   width: number;
   height: number;
   className?: string;
+  hoverable?: boolean;
 }
 
-const MainImage: FC<props> = ({ src, alt, width, height, className = "" }) => {
+const MainImage: FC<props> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  hoverable,
+}) => {
   return (
     <div className={`group overflow-hidden ${className}`}>
       <Image
@@ -17,7 +25,9 @@ const MainImage: FC<props> = ({ src, alt, width, height, className = "" }) => {
         alt={alt}
         width={width}
         height={height}
-        className="aspect-video object-cover object-center w-full group-hover:scale-105 transition-all"
+        className={`aspect-video object-cover object-center w-full transition-all ${
+          hoverable ? "group-hover:scale-105" : ""
+        }`}
       />
     </div>
   );
