@@ -1,7 +1,7 @@
 import { FC } from "react";
-import AboutBlog from "./aboutBlog";
-import BlogContent from "./blogContent";
-import MoreBlogs from "./moreBlogs";
+import AboutBlog from "./sections/aboutBlog";
+import BlogContent from "./sections/blogContent";
+import MoreBlogs from "./sections/moreBlogs";
 import blogList from "@/data/blogList";
 
 interface props {
